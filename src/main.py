@@ -18,7 +18,7 @@ from utils.reserve import Reserve
 
 if __name__ == '__main__':
 
-    browser = webdriver.Chrome(executable_path='../driver/win/chromedriver.exe')
+    browser = webdriver.Chrome(executable_path='./driver/win/chromedriver.exe')
     browser.maximize_window()
 
     # 用户名密码配置信息, 可选多人
@@ -30,7 +30,7 @@ if __name__ == '__main__':
     email_n = 'xxxx@163.com'
 
     # 输入需要的图书馆和座位候选座位
-    wanted_seats = [233, 239, 235] # 请输入完整的3位座位号（如不足请用0补足）
+    wanted_seats = [239, 235] # 请输入完整的3位座位号（如不足请用0补足）
     library_name = '令希' # 请输入伯川或令希
     reading_room = 401 # 请预先在系统上确定要指定的阅览室
 
