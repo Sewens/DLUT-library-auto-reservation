@@ -18,7 +18,7 @@ from utils.reserve import Reserve
 
 if __name__ == '__main__':
 
-    browser = webdriver.Chrome(executable_path='../driver/chromedriver.exe')
+    browser = webdriver.Chrome(executable_path='../driver/win/chromedriver.exe')
     browser.maximize_window()
 
     # 用户名密码配置信息, 可选多人
