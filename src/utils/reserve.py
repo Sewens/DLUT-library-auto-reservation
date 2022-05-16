@@ -94,7 +94,7 @@ class Reserve(object):
         # 直接选择座位
         flag = False
         for seat_id in self.wanted_seats:
-            seat = browser.find_element_by_xpath("//table/tbody//tr//td/div[@class='seat-normal']/i[contains(text()," + str(seat_id) + ")]")
+            seat = browser.find_element_by_xpath("//table/tbody//tr//td/div[@class='seat-normal']/i[contains(text()," + f'{seat_id:-03}' + ")]")
             seat.click()
             confirm_button = browser.find_element_by_id('btn_submit_addorder')
             time.sleep(0.5)
