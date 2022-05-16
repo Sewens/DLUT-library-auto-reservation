@@ -30,7 +30,7 @@ jobs:
       run: |
         sudo cp -p ./driver/linux/chromedriver /usr/bin   # 运行时候讲
         chmod -R 777 /usr/bin/chromedriver
-        python ./src/main.py
+        python ./src/run_actions.py
       env:
         STUID: ${{ secrets.STUID }}
         PW: ${{ secrets.PW }}
