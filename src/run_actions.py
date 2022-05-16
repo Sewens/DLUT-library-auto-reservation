@@ -32,7 +32,7 @@ chrome_options.binary_location = CHROMEDRIVER_PATH
 # 运行在非沙盒模式下 需要最先进行这个配置
 chrome_options.add_argument('--no-sandbox')
 # 设置窗体大小
-chrome_options.add_argument('--window-size=1420,1080')
+# chrome_options.add_argument('--window-size=1420,1080')
 # 运行在headless模式
 chrome_options.add_argument('--headless')
 # 不使用gpu渲染
