@@ -14,6 +14,7 @@ import smtplib
 from email.mime.text import MIMEText
 import traceback
 from utils.reserve import Reserve
+import os
 
 # 通过github secret 获取学号密码以及其他敏感信息
 StuID = os.environ['STUID']    # 学号
