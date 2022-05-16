@@ -16,6 +16,7 @@ import traceback
 from utils.reserve import Reserve
 import os
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 # 通过github secret 获取学号密码以及其他敏感信息
 StuID = os.environ['STUID']    # 学号
@@ -25,22 +26,17 @@ PW = os.environ['PW']    # 密码
 # 在.github/workflow中指定了相关文件的copy
 CHROMEDRIVER_PATH = '/usr/bin/chromedriver'
 
-chrome_options = webdriver.ChromeOptions()
-# 此处为chromedriver文件地址
-chrome_options.binary_location = CHROMEDRIVER_PATH
+chrome_options = Options()
 
-# 运行在非沙盒模式下 需要最先进行这个配置
-chrome_options.add_argument('--no-sandbox')
-# 设置窗体大小
-# chrome_options.add_argument('--window-size=1420,1080')
-# 运行在headless模式
 chrome_options.add_argument('--headless')
-# 不使用gpu渲染
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument('--disable-gpu')
-# 将驱动和options关联
-browser = webdriver.Chrome(chrome_options=chrome_options)
 
-# browser = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH)
+# 将驱动和options关联
+
+browser = webdriver.Chrome(CHROMEDRIVER_PATH,chrome_options=chrome_options)
+
 browser.maximize_window()
 
 # 用户名密码配置信息, 可选多人
