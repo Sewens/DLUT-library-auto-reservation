@@ -28,7 +28,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: SignIn
       run: |
-        sudo cp -p ./dirver/linux/chromedriver /usr/bin   # 运行时候讲
+        sudo cp -p ./driver/linux/chromedriver /usr/bin   # 运行时候讲
         chmod -R 777 /usr/bin/chromedriver
         python ./src/main.py
       env:
