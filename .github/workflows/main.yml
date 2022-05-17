@@ -9,7 +9,7 @@ on:
   pull_request:
     branches: [ main ]
   schedule:
-    - cron: 45 18 * * *  # cron time 和北京时间相互转换需要考虑一下
+    - cron: 45 22 * * *  # UTC时间比北京时间早8个小时
 
 jobs:
   build:
